@@ -1,0 +1,7 @@
+{
+  "name": "teamApt-WeightLoss-App",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
