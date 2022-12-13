@@ -1,0 +1,130 @@
+<ion-header  class="ion-no-border">
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="title-col">
+          <ion-title size="large">History</ion-title>
+        </ion-col>
+        <ion-col class="profile-col">
+          <ion-icon name="sync-outline" ></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<h1 class="date">
+  Monday, 11 July
+</h1>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <p>weight</p>
+            <h1 class="weight-value">52,3<sub>kg</sub></h1>
+          </ion-col>
+
+          <ion-col>
+            <canvas baseChart width="400" height="400"
+                    [type]="'line'"
+                    [data]="lineChartData"
+                    [options]="lineChartOptions"
+                    [legend]="lineChartLegend">
+            </canvas>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <table class="tg">
+      <thead>
+      <tr>
+        <th class="tg-0pky" colspan="2">
+          <h1 class="date">
+            BMI
+          </h1>
+        </th>
+        <th class="tg-0lax" colspan="2">
+          <span> 173 <ion-icon name="caret-up" color="primary"></ion-icon></span>
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td class="tg-0lax">
+          <progress-bar [progress]="'100'" [color]="'#c2ff4d'">
+          </progress-bar>
+        </td>
+        <td class="tg-0lax" colspan="2">
+          <progress-bar [progress]="'100'" [color]="'#bdb3ff'">
+          </progress-bar>
+        </td>
+        <td class="tg-0lax">
+          <progress-bar [progress]="'100'" [color]="'#907dfe'">
+          </progress-bar>
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-0lax">
+            <ion-badge slot="start" color="success">&nbsp;</ion-badge>Low
+        </td>
+        <td class="tg-0lax" colspan="2">
+            <ion-badge slot="start">&nbsp;</ion-badge>Normal
+        </td>
+        <td class="tg-0lax">
+          <ion-item>
+            <ion-badge slot="start" color="primary">&nbsp;</ion-badge>High
+          </ion-item>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </ion-card>
+
+  <ion-slides>
+    <ion-slide>
+         <ion-grid>
+            <ion-row>
+              <ion-col>
+                <p>Blood Pressure</p>
+                <h1>120/80</h1>
+              </ion-col>
+              <ion-col>
+                <canvas baseChart
+                        [data]="barChartData"
+                        [options]="barChartOptions"
+                        [plugins]="barChartPlugins"
+                        [type]="'bar'">
+                </canvas>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+    </ion-slide>
+
+    <ion-slide>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <p>Sleep</p>
+                <h1>6<sub>h</sub>20<sub>min</sub></h1>
+              </ion-col>
+              <ion-col>
+                <canvas baseChart
+                        [data]="barChartData1"
+                        [options]="barChartOptions"
+                        [plugins]="barChartPlugins"
+                        [type]="'bar'">
+                </canvas>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
