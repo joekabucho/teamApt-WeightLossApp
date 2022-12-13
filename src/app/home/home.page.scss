@@ -1,0 +1,142 @@
+ion-fab {
+ bottom: 4vh;
+}
+
+ion-tab-bar {
+  border: none;
+}
+
+ion-button {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+}
+
+ion-list {
+  margin-left: -6em;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background: var(--ion-item-background, var(--ion-background-color, #fff));
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ion-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 29px;
+  color: black;
+  padding-right: 4em;
+}
+
+ion-icon {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.top-card {
+  background-color: #907dfe;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+::ng-deep.swiper-container-horizontal.swiper-pagination-bullets {
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+}
+
+.cards-container {
+  margin-top: 20px;
+  width: 100%;
+
+  .card {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    .card-content {
+      position: absolute;
+    }
+
+    .card-image {
+      width: 90px;
+      height: 30px;
+    }
+
+    .footer-title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      color: #000000;
+      font-size: 12px;
+      margin-top: 20px;
+    }
+
+    input[type="radio"] {
+      -webkit-appearance: none;
+      appearance: none;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+      position: absolute;
+      cursor: pointer;
+      outline: none;
+    }
+
+    input[type="radio"]:hover {
+      transform: scale(1.05);
+    }
+
+    // input[type="radio"]:checked {
+    //     border: 1px solid #0033AA;
+    // }
+
+    input[type="radio"]:checked:after {
+      background-color: #478bfb;
+    }
+  }
+}
+
+.slides {
+  padding-bottom: 50px;
+}
+
+.slide-1 {
+  padding-left: 4px;
+}
+
+.slide-2 {
+  padding-right: 4px;
+}
+
+.header-label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  color: #000000;
+  font-size: 14px;
+  margin-top: 20px;
+  justify-content: center;
+  text-align: left;
+}
+
+p-knob {
+  width: 13em;
+}
+
+.marker {
+  z-index: 5;
+}

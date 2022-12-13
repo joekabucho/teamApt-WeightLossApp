@@ -1,0 +1,207 @@
+.user {
+  display: flex;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  float: right;
+}
+
+.profile {
+  background-image: url('https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg?resize=760,5060');
+}
+
+.card-content {
+  padding: 20px;
+
+}
+
+
+ion-icon .slide-icon {
+  display: flex;
+  justify-content: center;
+}
+ion-grid {
+  display: flex;
+}
+
+ion-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 29px;
+  color: black;
+  padding-top: 0.5em;
+  padding-right: 4em;
+}
+
+
+
+.goal {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 29px;
+  color: black;
+  padding-right: 4em;
+  padding-left: 1.3em;
+}
+
+.trend {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 29px;
+  color: black;
+  padding-top: -5.5em;
+  padding-right: 4em;
+  padding-left: 1.3em;
+}
+
+.see {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 29px;
+  color: #9a9b9c;
+  padding-top: 0.5em;
+  cursor: pointer ;
+  border-bottom: 1px dotted;
+}
+
+.muscle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 29px;
+  color: #000000;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.more-info {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 29px;
+  color: #9a9b9c;
+  padding-top: 0.5em;
+}
+
+.slide-card {
+  height: 150px;
+  width: 150px;
+}
+
+::ng-deep.swiper-container-horizontal.swiper-pagination-bullets {
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+}
+
+.cards-container {
+  margin-top: 20px;
+  width: 100%;
+
+  .card {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 116px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    .card-content {
+      position: absolute;
+    }
+
+    .card-image {
+      width: 90px;
+      height: 66px;
+    }
+
+    .footer-title {
+      color: #000000;
+      font-size: 12px;
+      margin-top: 20px;
+    }
+
+    input[type="radio"] {
+      -webkit-appearance: none;
+      appearance: none;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+      position: absolute;
+      cursor: pointer;
+      outline: none;
+    }
+
+    input[type="radio"]:hover {
+      transform: scale(1.05);
+    }
+
+    // input[type="radio"]:checked {
+    //     border: 1px solid #0033AA;
+    // }
+
+    input[type="radio"]:checked:after {
+      background-color: #478bfb;
+    }
+  }
+}
+
+.slides {
+  padding-bottom: 7px;
+}
+
+.slide-1 {
+  padding-left: 4px;
+}
+
+.slide-2 {
+  padding-right: 4px;
+}
+
+.chart {
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: #907dfe;
+  color: white;
+}
+
+ion-fab {
+  bottom: 0px;
+}
+
+.footer-card {
+  border-radius: 10px;
+}
+
+.slider-icon {
+  padding-top: 3.5em;
+}
+
+.slider-elem1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.slider-elem2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #000000;
+}
+
+table {
+  height: 5px;
+}
+

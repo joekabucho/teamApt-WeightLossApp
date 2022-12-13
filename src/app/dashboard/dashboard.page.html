@@ -1,0 +1,170 @@
+<ion-header  class="ion-no-border">
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="title-col">
+          <ion-title size="large">My Activity</ion-title>
+        </ion-col>
+        <ion-col class="profile-col">
+          <div class="user profile">
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-slides class="slides" [options]="sliderConfig">
+    <ion-slide class="slide-1">
+      <div class="cards-container">
+        <div class="card">
+
+               <div class="card-content">
+
+                 <table class="tg">
+                   <thead>
+                   <tr>
+                     <td  rowspan="3">
+                       <ion-icon name="watch-outline" color="primary" ></ion-icon>
+                     </td>
+                     <td>
+                       <p class="slider-elem1">27<sub>min</sub></p>
+                     </td>
+                   </tr>
+                   <tr>
+                     <td>
+                       <p class="slider-elem2">Left today</p>
+                     </td>
+                   </tr>
+                   <tr>
+                     <td >
+                       <progress-bar [progress]="'80'" [color]="'#c2ff4d'">
+                       </progress-bar>
+                     </td>
+                   </tr>
+                   </thead>
+                 </table>
+        </div>
+      </div>
+      </div>
+    </ion-slide>
+    <ion-slide class="slide-2">
+      <div class="cards-container">
+        <div class="card">
+
+          <div class="card-content">
+
+            <table class="tg">
+              <thead>
+              <tr>
+                <td  rowspan="3">
+                  <ion-icon name="flame-outline" color="primary" ></ion-icon>
+                </td>
+                <td>
+                  <p class="slider-elem1">866</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="slider-elem2">Calories burn</p>
+                </td>
+              </tr>
+              <tr>
+                <td >
+                  <progress-bar [progress]="'80'" [color]="'#c2ff4d'">
+                  </progress-bar>
+                </td>
+              </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide class="slide-2">
+      <div class="cards-container">
+        <div class="card">
+
+          <div class="card-content">
+
+            <table class="tg">
+              <thead>
+              <tr>
+                <td  rowspan="3">
+                  <ion-icon name="footsteps-outline" color="primary" ></ion-icon>
+                </td>
+                <td>
+                  <p class="slider-elem1">7579</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="slider-elem2">Steps</p>
+                </td>
+              </tr>
+              <tr>
+                <td >
+                  <progress-bar [progress]="'80'" [color]="'#c2ff4d'">
+                  </progress-bar>
+                </td>
+              </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-grid>
+    <ion-row>
+      <h1 class="goal">Goal of the week</h1>
+    </ion-row>
+
+    <ion-row>
+      <p class="more-info">42 0f 54</p>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card class="chart">
+
+    <ion-card-content>
+      <canvas baseChart
+              [data]="barChartData"
+              [options]="barChartOptions"
+              [plugins]="barChartPlugins"
+              [type]="'bar'">
+      </canvas>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <h1 class="trend">Trending workouts</h1>
+    </ion-row>
+
+    <ion-row>
+      <p> <span class="see">See all</span></p>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card class="footer-card">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="auto">
+            <ion-icon name="bicycle-outline" size="large" color="success"></ion-icon>
+          </ion-col>
+          <ion-col size="auto">
+            <p class="muscle" >Muscle builder</p>
+          </ion-col>
+          <ion-col size="auto">
+            <ion-icon name="play-circle-outline" size="large" color="success"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

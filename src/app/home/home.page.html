@@ -1,0 +1,196 @@
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="dashboard">
+      <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="stats">
+      <ion-icon name="stats-chart"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="chats">
+      <ion-icon name="chatbubble"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="profile">
+      <ion-icon name="person"></ion-icon>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+
+</ion-tabs>
+
+
+<ion-fab vertical="bottom" horizontal="center">
+  <ion-fab-button>
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-list lines="none">
+      <ion-item>
+        <ion-button  expand="block" shape="round" color="light" (click)="setOpen(true)">
+          <ion-icon name="fitness-outline" color="primary"></ion-icon>
+          Add blood pressure
+        </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-button  expand="block" shape="round" color="light" (click)="setOpen(true)">
+          <ion-icon name="clipboard-outline" color="primary"></ion-icon>
+          Add weight measurement
+        </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-button  expand="block" shape="round" color="light">
+          <ion-icon name="bicycle-outline" color="primary"></ion-icon>
+          Add activity
+        </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-button  expand="block" shape="round" color="light">
+          <ion-icon name="watch-outline" color="primary"></ion-icon>
+          Track my workout
+        </ion-button>
+      </ion-item>
+
+    </ion-list>
+  </ion-fab-list>
+</ion-fab>
+
+<ion-modal [isOpen]="isModalOpen">
+  <ng-template>
+    <ion-header  class="ion-no-border">
+      <ion-toolbar>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-icon name="chevron-back-outline" (click)="setOpen(false)"></ion-icon>
+            </ion-col>
+            <ion-col class="title-col">
+              <ion-title size="large">Add Weight</ion-title>
+            </ion-col>
+            <ion-col class="profile-col">
+              <ion-icon name="options-outline" ></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content [fullscreen]="true">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+
+          </ion-col>
+          <ion-col>
+            <ion-card class="top-card">
+              <ion-card-content>
+                <h1 > {{value}}</h1>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <div >
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+              <p-knob [(ngModel)]="value" [min]="30" [max]="60" style="width: 100%"
+                      valueColor="#907dfe"
+                      rangeColor="#c2ff4d"></p-knob>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+              <div class="cards-container">
+                <div class="card">
+                  <input type="radio" value="Vehicle" id="card1"  checked>
+                  <div class="card-content">
+                    <p class="footer-title">Male</p>
+                  </div>
+                </div>
+              </div>
+          </ion-col>
+          <ion-col>
+              <div class="cards-container">
+                <div class="card">
+                  <input type="radio" value="Machinery"  id="card2">
+                  <div class="card-content">
+                    <p class="footer-title">Female</p>
+                  </div>
+                </div>
+              </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-card>
+              <ion-card-content>
+                <table class="tg" style="width: 100%;height:100%">
+                  <thead>
+                  <tr>
+                    <th style="text-align:center">Age</th>
+                    <th>
+                      <ion-icon name="settings-outline" size="small" >
+                      </ion-icon>
+                    </th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td colspan="2" style="text-align:center"><h1>21</h1></td>
+                  </tr>
+                  </tbody>
+                </table>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+
+          <ion-col>
+            <ion-card>
+
+              <ion-card-content>
+                <table class="tg" style="width: 100%;height:100%">
+                  <thead>
+                  <tr>
+                    <th style="text-align:center">Height</th>
+                    <th>
+                      <ion-icon name="settings-outline" size="small" >
+                      </ion-icon>
+                    </th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td colspan="2" style="text-align:center"><h1>173</h1></td>
+                  </tr>
+                  </tbody>
+                </table>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+
+        </ion-row>
+        <ion-row>
+          <ion-button  expand="block" shape="round" color="primary" (click)="setOpen(true)">
+            Save
+          </ion-button>
+        </ion-row>
+      </ion-grid>
+    </ion-content>
+
+  </ng-template>
+</ion-modal>
